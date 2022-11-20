@@ -1,10 +1,6 @@
 ﻿// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 
-// m = 3, n = 4.
 
-// 0,5 7 -2 -0,2
-// 1 -3,3 8 -9,9
-// 8 7,8 -7,1 9
 void dataInput(out int row, out int column, out int minValue, out int maxValue)
 {
     row = 10;
@@ -18,18 +14,16 @@ void dataInput(out int row, out int column, out int minValue, out int maxValue)
         string[] text ={$"Будет создан двумерный массив размером {row} на {column}, заполненный",
                         $"случайными вещественными числами из диапозона ({minValue}, {maxValue}).",
                         $"- Что бы изменить {data[i].ToUpper()} массива введите новое значение;",
-                        $"- Что бы оставить {data[i].ToUpper()} массива без изменений нажмите Enter;",
-                        "- Что бы создать массив с заданными параметрами введите \"GO\"."};
+                        $"- Что бы оставить {data[i].ToUpper()} массива без изменений нажмите Enter"};
         for (int j = 0; j < text.Length; j++) Console.WriteLine(text[j]);
         string? input = Console.ReadLine();
         if (String.IsNullOrEmpty(input)) continue;
-        if (input.ToUpper() == "GO") return;
         if (i == 0) row = GetPositiveInt(input);
         if (i == 1) column = GetPositiveInt(input);
     }
     Console.Clear();
-    Console.WriteLine($"Cоздан двумерный массив размером {row} на {column}, заполненный" +
-                      $"случайными вещественными числами из диапозона ({minValue}, {maxValue})");
+    Console.WriteLine($"Cоздан двумерный массив размером {row} на {column}, заполненный " +
+                      $"случайными вещественными числами из диапозона ({minValue}, {maxValue})\n");
 }
 
 int GetPositiveInt(string? value)
