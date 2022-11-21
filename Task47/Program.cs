@@ -4,7 +4,7 @@
 void dataInput(out int row, out int column, out int minValue, out int maxValue)
 {
     row = 10;
-    column = 10;
+    column = 20;
     minValue = -1000;
     maxValue = 1000;
     string[] data = { "количество строк", "количество столбцов" };
